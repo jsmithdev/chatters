@@ -1,0 +1,37 @@
+<template>
+
+    <lightning-card title={header} icon-name={icon}>
+
+        <template for:each={chatters} for:item="chatter">
+            
+            <div class="container" key={chatter.key}>
+                <div class="chat" key={chatter.key}>
+
+                    <c-chatter-child
+                        key={chatter.key}
+                        chatter={chatter}
+                    ></c-chatter-child>
+
+                    <template if:true={chatter.FeedComments}>
+                        
+                        <br key={chatter.key}/>
+                        <b key={chatter.key}>Comments</b>
+
+                        <template for:each={chatter.FeedComments} for:item="comment">
+
+                            <c-chatter-child
+                                key={chatter.key_com}
+                                chatter={comment}
+                                format="comment"
+                            ></c-chatter-child>
+                        </template>
+                    </template>
+                </div>
+            </div>
+
+            <hr key={chatter.key} style="margin: 10px 0 0 0;" />
+        </template>
+
+        <!-- <button onclick={debug}>Log</button> -->
+    </lightning-card>
+</template>

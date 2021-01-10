@@ -1,0 +1,24 @@
+<template>
+
+    <template if:false={isComment}>
+
+        <div style="float:right; text-align: right; width: 100%;">
+            <b>Liked:</b> {likeCount}
+            <br/>
+            <b>Comments:</b> {commentCount}
+            <br/>
+        </div>
+
+
+        <lightning-formatted-rich-text
+            value={body}
+        ></lightning-formatted-rich-text>
+
+    </template>
+
+    <template if:true={isComment}>
+        <lightning-formatted-rich-text
+            value={body}
+        ></lightning-formatted-rich-text>
+    </template>
+</template>
