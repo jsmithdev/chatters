@@ -4,6 +4,11 @@ View chatter posts from related records
 
 ![screenshot](https://i.imgur.com/iE1SK5y.png)
 
+[todo] Cleaner idea for separation of sobjects
+
+![image](https://github.com/user-attachments/assets/b49bc4ce-1dc6-4987-a230-a65e4078f12e)
+
+
 ## Notes
 
 Tested on Account
